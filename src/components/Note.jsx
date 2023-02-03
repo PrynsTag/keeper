@@ -4,13 +4,13 @@ import PropTypes from 'prop-types';
 function Note(props) {
   const { title, content } = props;
 
-  function deleteNote() {
+  function handleClick() {
     const { id, onDelete } = props;
     onDelete(id);
   }
 
   return (
-    <div onClick={deleteNote} className="note" role="presentation">
+    <div onClick={handleClick} className="note" role="presentation">
       <h1>{title}</h1>
       <p>{content}</p>
       <button type="button">Delete</button>

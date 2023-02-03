@@ -14,6 +14,7 @@ function CreateArea(props) {
     const { onAdd } = props;
     onAdd({ id: uuidv4(), title: titleValue, content: contentValue });
   }
+
   return (
     <div>
       <form onSubmit={handleSubmit}>
